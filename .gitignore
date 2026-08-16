@@ -1,5 +1,4 @@
-# Data files (large, regenerated from Pre-Processing.ipynb / source .mat file)
-*.csv
+# Source .mat file (not included; CSVs derived from it are tracked in data/)
 *.mat
 
 # Jupyter

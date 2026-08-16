@@ -8,13 +8,13 @@ People with type 1 diabetes wear a CGM sensor that logs blood glucose every 5 mi
 
 ## Data
 
-Source data is `InsulinGlucoseData2.mat`, a MATLAB export containing paired CGM and insulin bolus time series (not included in this repo — see below). `Pre-Processing.ipynb` converts it into two CSVs:
+Source data is `InsulinGlucoseData2.mat`, a MATLAB export containing paired CGM and insulin bolus time series (not included in this repo — see below). `Pre-Processing.ipynb` converts it into two CSVs, tracked in `data/`:
 
 | File | Contents |
 |---|---|
-| `CGMData.csv` / `CGMProcessed.csv` | Timestamped CGM (blood glucose) readings, NaN/Inf rows removed |
-| `BolusData.csv` / `BolusProcessed.csv` | Timestamped insulin bolus delivery amounts, NaN/Inf rows removed |
-| `kalman_filter.csv` | CGM series annotated with meal / start-of-meal labels, used as ground truth for the Kalman meal-detection experiment |
+| `data/CGMData.csv` / `data/CGMProcessed.csv` | Timestamped CGM (blood glucose) readings, NaN/Inf rows removed |
+| `data/BolusData.csv` / `data/BolusProcessed.csv` | Timestamped insulin bolus delivery amounts, NaN/Inf rows removed |
+| `data/kalman_filter.csv` | CGM series annotated with meal / start-of-meal labels, used as ground truth for the Kalman meal-detection experiment |
 
 ## Approaches
 
@@ -42,9 +42,10 @@ Kalman.ipynb                        # UKF glucose tracking + meal detection
 RNN.ipynb                           # LSTM CGM forecasting
 SARIMA.ipynb                        # Rolling ARIMA CGM forecasting + meal detection
 Classifier - Random Forest.ipynb    # RF meal/no-meal classification
-CGMData.csv, CGMProcessed.csv       # CGM time series (raw / cleaned)
-BolusData.csv, BolusProcessed.csv   # Insulin bolus time series (raw / cleaned)
-kalman_filter.csv                   # CGM + meal labels used by Kalman.ipynb
+data/
+  CGMData.csv, CGMProcessed.csv     # CGM time series (raw / cleaned)
+  BolusData.csv, BolusProcessed.csv # Insulin bolus time series (raw / cleaned)
+  kalman_filter.csv                 # CGM + meal labels used by Kalman.ipynb
 ```
 
 ## Setup
