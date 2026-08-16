@@ -1,0 +1,14 @@
+numpy
+pandas
+scipy
+matplotlib
+scikit-learn
+statsmodels
+pmdarima
+filterpy
+tqdm
+tensorflow
+keras
+joblib
+six
+jupyter

@@ -1,0 +1,15 @@
+# Data files (large, regenerated from Pre-Processing.ipynb / source .mat file)
+*.csv
+*.mat
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# OS
+.DS_Store
